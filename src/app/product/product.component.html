@@ -1,0 +1,18 @@
+<div [style.backgroundColor]="produkt.czyPromocja ? 'red' : 'white'" class="produkt">
+    <table>
+      <tr>
+        <th>Nazwa</th>
+        <th>Cena</th>
+        <th>Data utworzenia</th>
+        <th>Liczba sztuk w koszyku</th>
+        <th>Dodaj do koszyka</th>
+      </tr>
+      <tr>
+        <td>{{ produkt.nazwa }}</td>
+        <td>{{ produkt.cena.toFixed(2) }} zł</td>
+        <td>{{ produkt.dataUtworzenia | date: 'dd.MM.yyyy'}}r.</td>
+        <td>{{ iloscWSkoszyku }}</td>
+        <td><button (click)="dodajDoKoszyka()">Dodaj do koszyka</button></td>
+      </tr>
+    </table>
+  </div>
